@@ -20,7 +20,7 @@ import java.io.IOException;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = {"spittr.controller"})
+@ComponentScan(basePackages = {"spittr.controller.webmvccontroller"})
 public class SpringMvcConfig extends WebMvcConfigurerAdapter{
 
     //jsp试图解析器

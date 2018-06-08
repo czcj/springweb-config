@@ -11,7 +11,7 @@
     <input type="submit" />
 </form>
 <script>
-    var url = 'ws://'+window.location.host+'/marco';
+    var url = 'ws://'+window.location.host+'/marcoByWebSocket';
     var sock = new WebSocket(url);
     sock.onopen = function () {
         console.log('Opening');
@@ -24,8 +24,8 @@
         },2000)
     }
     function sayMarco() {
-        console.log('sending marco to service');
-        sock.send("marco!");
+        console.log('sending marco with webSocket to service');
+        sock.send("marco with webSocket!");
     }
 </script>
 </body>

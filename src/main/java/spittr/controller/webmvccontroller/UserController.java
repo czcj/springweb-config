@@ -1,4 +1,4 @@
-package spittr.controller;
+package spittr.controller.webmvccontroller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.Errors;

@@ -3,6 +3,7 @@ package spittr.service.impl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import spittr.dao.SpitterMapper;
+import spittr.pojo.Spitter;
 import spittr.pojo.SpitterExample;
 import spittr.pojo.Spittle;
 import spittr.service.SpittrService;
@@ -23,8 +24,10 @@ public class SpittrServiceImpl implements SpittrService {
         }
         return spittles;
     }
-    public void test(){
+    public Spitter test(){
         SpitterExample example = new SpitterExample();
-        spitterMapper.selectByExample(example);
+        List<Spitter> spitters = spitterMapper.selectByExample(example);
+        Spitter spitter = spitters.get(0);
+        return spitter;
     }
 }
